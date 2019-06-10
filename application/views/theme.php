@@ -8,7 +8,7 @@
     <meta name="description" content="bootstrap admin template">
     <meta name="author" content="">
     
-    <title>Blank | Remark Admin Template</title>
+    <title>SISTEM PENDUKUNG KEPUTUSAN </title>
     
     <link rel="apple-touch-icon" href="<?php echo base_url("assets"); ?>/assets/images/apple-touch-icon.png">
     <link rel="shortcut icon" href="<?php echo base_url("assets"); ?>/assets/images/favicon.ico">
@@ -141,7 +141,7 @@
         </button>
         <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
           <img class="navbar-brand-logo" src="<?php echo base_url("assets"); ?>/assets/images/logo.png" title="Remark">
-          <span class="navbar-brand-text hidden-xs-down"> Remark</span>
+          <span class="navbar-brand-text hidden-xs-down"> USJ - JAYAPURA</span>
         </div>
         <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
           data-toggle="collapse">
