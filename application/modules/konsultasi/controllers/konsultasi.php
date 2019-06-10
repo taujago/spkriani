@@ -85,63 +85,63 @@ endforeach;
 
 if(   // rule 1 
  
-in_array("G001",$post['id_gejala']) && 
-in_array("G002",$post['id_gejala']) && 
-in_array("G003",$post['id_gejala']) && 
-in_array("G004",$post['id_gejala']) && 
-in_array("G005",$post['id_gejala']) && 
-in_array("G006",$post['id_gejala']) && 
-in_array("G007",$post['id_gejala']) && 
-in_array("G008",$post['id_gejala']) && 
-in_array("G009",$post['id_gejala']) && 
-in_array("G010",$post['id_gejala'])   
+in_array("G001",$post['gejala_id']) && 
+in_array("G002",$post['gejala_id']) && 
+in_array("G003",$post['gejala_id']) && 
+in_array("G004",$post['gejala_id']) && 
+in_array("G005",$post['gejala_id']) && 
+in_array("G006",$post['gejala_id']) && 
+in_array("G007",$post['gejala_id']) && 
+in_array("G008",$post['gejala_id']) && 
+in_array("G009",$post['gejala_id']) && 
+in_array("G010",$post['gejala_id'])   
 
 ) $kd="P1";
 
 else if ( // rule 2 
-in_array("G002",$post['id_gejala']) &&
-in_array("G005",$post['id_gejala']) &&
-in_array("G007",$post['id_gejala']) &&
-in_array("G009",$post['id_gejala']) &&
-in_array("G011",$post['id_gejala']) &&
-in_array("G012",$post['id_gejala']) &&
-in_array("G013",$post['id_gejala']) &&
-in_array("G014",$post['id_gejala']) &&
-in_array("G015",$post['id_gejala']) &&
-in_array("G016",$post['id_gejala']) &&
-in_array("G017",$post['id_gejala']) &&
-in_array("G018",$post['id_gejala']) &&
-in_array("G019",$post['id_gejala']) &&
-in_array("G020",$post['id_gejala'])  
+in_array("G002",$post['gejala_id']) &&
+in_array("G005",$post['gejala_id']) &&
+in_array("G007",$post['gejala_id']) &&
+in_array("G009",$post['gejala_id']) &&
+in_array("G011",$post['gejala_id']) &&
+in_array("G012",$post['gejala_id']) &&
+in_array("G013",$post['gejala_id']) &&
+in_array("G014",$post['gejala_id']) &&
+in_array("G015",$post['gejala_id']) &&
+in_array("G016",$post['gejala_id']) &&
+in_array("G017",$post['gejala_id']) &&
+in_array("G018",$post['gejala_id']) &&
+in_array("G019",$post['gejala_id']) &&
+in_array("G020",$post['gejala_id'])  
 ) $kd="P2";
  
 else if ( // rule 3
-in_array("G004",$post['id_gejala']) && 
-in_array("G005",$post['id_gejala']) && 
-in_array("G007",$post['id_gejala']) && 
-in_array("G022",$post['id_gejala']) && 
-in_array("G023",$post['id_gejala']) && 
-in_array("G024",$post['id_gejala']) && 
-in_array("G025",$post['id_gejala']) && 
-in_array("G026",$post['id_gejala']) && 
-in_array("G027",$post['id_gejala']) && 
-in_array("G028",$post['id_gejala']) && 
-in_array("G029",$post['id_gejala']) && 
-in_array("G030",$post['id_gejala']) 
+in_array("G004",$post['gejala_id']) && 
+in_array("G005",$post['gejala_id']) && 
+in_array("G007",$post['gejala_id']) && 
+in_array("G022",$post['gejala_id']) && 
+in_array("G023",$post['gejala_id']) && 
+in_array("G024",$post['gejala_id']) && 
+in_array("G025",$post['gejala_id']) && 
+in_array("G026",$post['gejala_id']) && 
+in_array("G027",$post['gejala_id']) && 
+in_array("G028",$post['gejala_id']) && 
+in_array("G029",$post['gejala_id']) && 
+in_array("G030",$post['gejala_id']) 
 ) $kd="P3";
 
 else if( // rule 4 
-in_array("G001",$post['id_gejala']) && 
-in_array("G004",$post['id_gejala']) && 
-in_array("G005",$post['id_gejala']) && 
-in_array("G007",$post['id_gejala']) && 
-in_array("G016",$post['id_gejala']) && 
-in_array("G025",$post['id_gejala']) && 
-in_array("G031",$post['id_gejala']) && 
-in_array("G032",$post['id_gejala']) && 
-in_array("G033",$post['id_gejala']) && 
-in_array("G034",$post['id_gejala']) && 
-in_array("G035",$post['id_gejala'])   
+in_array("G001",$post['gejala_id']) && 
+in_array("G004",$post['gejala_id']) && 
+in_array("G005",$post['gejala_id']) && 
+in_array("G007",$post['gejala_id']) && 
+in_array("G016",$post['gejala_id']) && 
+in_array("G025",$post['gejala_id']) && 
+in_array("G031",$post['gejala_id']) && 
+in_array("G032",$post['gejala_id']) && 
+in_array("G033",$post['gejala_id']) && 
+in_array("G034",$post['gejala_id']) && 
+in_array("G035",$post['gejala_id'])   
 ) $kd="P4";
 
 else if( // rule 5
@@ -236,7 +236,35 @@ else
 	$kd="PPP";
 }
 
- 
+$this->db->where("kode",$kd);
+$res = $this->db->get("penyakit");
+
+// show_array($userdata); exit;
+$data_array['userdata'] = $_SESSION['userdata'][0];
+
+if($res->num_rows() > 0 ) {
+	$data_array['found'] = 1;
+	$dt_penyakit = $res->row();
+
+	$this->db->where("id",$id);
+	$this->db->update("pemeriksaan",array("penyakit_id"=>$dt_penyakit->id));
+
+
+	$this->db->select('g.*')->from('gejala g')
+	->join('pemeriksaan_detail pd','pd.gejala_id=g.id')
+	->join('pemeriksaan p','p.id = pd.pemeriksaan_id ')
+	->where("p.penyakit_id",$dt_penyakit->id);
+	$data_array['rec_gejala'] = $this->db->get();
+
+	$this->db->where("id",$dt_penyakit->id);
+	$data_array['penyakit'] = $this->db->get("penyakit")->row();
+
+	// show_array($data_array); exit;
+
+}
+else {
+	$data_array['found'] = 0; 
+}
 
 
 $content = $this->load->view($this->controller."_view_result",$data_array,true);
