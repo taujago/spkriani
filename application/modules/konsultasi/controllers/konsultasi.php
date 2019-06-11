@@ -24,7 +24,7 @@ class konsultasi extends master_controller {
 		 
 		$content = $this->load->view($this->controller."_view_form",$data_array,true);
 
-		$this->set_title("KONSULTASI  PENYAKIT PERNAFASAN");
+		$this->set_title("KONSULTASI  PENYAKIT YANG DISEBABKAN OLEH NYAMUK");
 		$this->set_content($content);
 		$this->render();
 	}

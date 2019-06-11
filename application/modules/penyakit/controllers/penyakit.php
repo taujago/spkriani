@@ -24,6 +24,22 @@ class penyakit extends master_controller {
 		$this->render();
 	}
 
+	function listview(){
+		// echo "fuckkk.."; exit;
+		$data_array = array();
+
+
+		$this->db->select('*')->from('penyakit');
+		$res = $this->db->get();
+		$data_array['record'] = $res; 
+		 
+		$content = $this->load->view($this->controller."_view_list",$data_array,true);
+
+		$this->set_title("INFORMASI DATA PENYAKIT");
+		$this->set_content($content);
+		$this->render();
+	}
+
 	function save(){
 
 
@@ -148,6 +164,9 @@ class penyakit extends master_controller {
 	        	$post['gambar'] = $dg['file_name'];
 	        }
 
+    	}
+    	else {
+    		unset($post['gambar']);
     	}
 
 

@@ -14,7 +14,7 @@ class home extends master_controller {
 		 
 		$content = $this->load->view($this->controller."_view",$data_array,true);
 
-		$this->set_title("DASHBOARD - SISTEM PENDUKUNG DIAGNOSA PENYAKIT PERNAFASAN");
+		$this->set_title("DASHBOARD - SISTEM PAKAR DIAGNOSA PENYAKIT YANG DISEBABKAN OLEH NYAMUK");
 		$this->set_content($content);
 		$this->render();
 	}

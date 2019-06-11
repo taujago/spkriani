@@ -265,6 +265,13 @@ if($_SESSION['userdata'][0]['level'] == "1") :
               </li>
 
 <?php endif; ?>
+
+<li class="site-menu-item">
+                    <a class="animsition-link" href="<?php echo site_url("penyakit/listview"); ?>">
+                       <i class="site-menu-icon fa-lightbulb-o
+" aria-hidden="true"></i>INFORMASI PENYAKIT
+                    </a>
+              </li>
               <li class="site-menu-item">
                     <a class="animsition-link" href="<?php echo site_url("konsultasi"); ?>">
                        <i class="site-menu-icon fa-life-bouy" aria-hidden="true"></i>KONSULTASI
@@ -301,7 +308,7 @@ if($_SESSION['userdata'][0]['level'] == "1") :
                    <?php echo $content; ?>  
                    
                 </div>
-              </div>
+        </div>
       </div>
     </div>
     <!-- End Page -->

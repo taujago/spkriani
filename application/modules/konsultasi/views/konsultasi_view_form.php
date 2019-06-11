@@ -59,7 +59,7 @@
 <div class="col-md-12">
 	
 <div class="form-group">
-	<label for="gejala"><strong>Gejala   </strong></label>
+	<label for="gejala"><strong>Masukkan gejala yang dirasakan :   </strong></label>
 	<?php 
 	$arr_gejala = $this->cm->arr_dropdown_gejala();
 	echo form_dropdown("gejala_id[]",$arr_gejala,'','id="gejala_id" class="form-control" multiple="multiple"');

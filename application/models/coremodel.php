@@ -54,5 +54,15 @@ function arr_dropdown_penyakit(){
     return $arr;
  }
 
+ function get_gejala($id_penyakit) {
+
+    $this->db->select('g.*')
+    ->from('gejala g')
+    ->join('pengetahuan p','p.id_gejala = g.id')
+    ->where('p.id_penyakit',$id_penyakit);
+    return $this->db->get();
+
+ }
+
 }
 ?>

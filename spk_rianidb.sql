@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2019 at 07:53 AM
+-- Generation Time: Jun 11, 2019 at 01:23 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.36
 
@@ -30,64 +30,65 @@ CREATE TABLE IF NOT EXISTS `gejala` (
   `id` int(11) NOT NULL,
   `gejala` varchar(255) NOT NULL,
   `kode` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=268 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=321 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gejala`
 --
 
 INSERT INTO `gejala` (`id`, `gejala`, `kode`) VALUES
-(217, 'Demam berulang-ulang selama 3-5 hari', 'G001'),
-(218, 'Demam timbul-hilang', 'G002'),
-(219, 'Pembengkakan kelenjar getah bening', 'G003'),
-(220, 'Radang saluran kelenjar getah bening', 'G004'),
-(221, 'Pembesaran tungkai', 'G005'),
-(222, 'Pembesaran buah zakar', 'G006'),
-(223, 'Pembesaran buah dada ', 'G007'),
-(224, 'Panas dan sakit', 'G008'),
-(225, 'Ketiak tampak kemerah-merahan', 'G009'),
-(226, 'Menggigil dan berkeringat', 'G010'),
-(227, 'Sakit kepala', 'G011'),
-(228, 'Muntah', 'G012'),
-(229, 'Mual', 'G013'),
-(230, 'Nyeri otot', 'G014'),
-(231, 'Demam tinggi mendadak 2-7 hari ', 'G015'),
-(232, 'Manifestasi pendarahan (hidung, gusi, kulit)', 'G016'),
-(233, 'Pembesaran hati (hepatomegali)', 'G017'),
-(234, 'Syok', 'G018'),
-(235, 'Tekanan darah menurun', 'G019'),
-(236, 'Ruam (bercak merah pada kulit)', 'G020'),
-(237, 'Nyeri seluruh tubuh', 'G021'),
-(238, 'Menggigil ', 'G022'),
-(239, 'Tidak nafsu makan', 'G023'),
-(240, 'Mata merah', 'G024'),
-(241, 'Kejang demam untuk anak-anak', 'G025'),
-(242, 'Nyeri sendi', 'G026'),
-(243, 'Kelumpuhan sementara (susah berjalan)', 'G027'),
-(244, 'Fotofobia', 'G028'),
-(245, 'Pegal-pegal dan gilu', 'G029'),
-(246, 'Rasa sakit pada tulang-tulang', 'G030'),
-(247, 'Muka kemerahan', 'G031'),
-(248, 'Ikterus', 'G032'),
-(249, 'Urine berwarna gelap', 'G033'),
-(250, 'Produksi urin berkurang', 'G034'),
-(251, 'Diare', 'G035'),
-(252, 'Denyut nadi melambat', 'G036'),
-(253, 'Gangguan berbicara dan berjalan', 'G037'),
-(254, 'Perubahan status mental', 'G038'),
-(255, 'Iritabilitas pada anak', 'G039'),
-(256, 'Peningkanan tekanan intrakrarial', 'G040'),
-(257, 'Gangguan sistem motorik', 'G041'),
-(258, 'Batuk', 'G042'),
-(259, 'Sakit mata', 'G043'),
-(260, 'Flu', 'G044'),
-(261, 'Lumpu', 'G045'),
-(262, 'Koma', 'G046'),
-(263, 'Gatal-gatal', 'G047'),
-(264, 'Demam berhari-hari', 'G048'),
-(265, 'Panas Tinggi secara tiba-tiba', 'G049'),
-(266, 'Nyeri punggung', 'G050'),
-(267, 'Sakit kepala hebat', 'G051');
+(269, 'Demam mendadak', 'G001'),
+(270, 'Menggigil', 'G002'),
+(271, 'Muka kemerahan', 'G003'),
+(272, 'Mual', 'G004'),
+(273, 'Muntah', 'G005'),
+(274, 'Nyeri punggung', 'G006'),
+(275, 'Sakit kepala', 'G007'),
+(276, 'Fotofobia', 'G008'),
+(277, 'Bercak merah pada kulit', 'G009'),
+(278, 'Nyeri sendi', 'G010'),
+(279, 'Panas tinggi secara tiba-tiba', 'G011'),
+(280, 'Tidak nafsu makan', 'G012'),
+(281, 'Badan lemas', 'G013'),
+(282, 'Gangguan abdomen', 'G014'),
+(283, 'Nyeri seluruh tubuh', 'G015'),
+(284, 'Pendarahan pada kulit, gusi, dan hidung ', 'G016'),
+(285, 'Kejang', 'G017'),
+(286, 'Batuk', 'G018'),
+(287, 'Syndrom shock dengue', 'G019'),
+(288, 'tekanan darah menurun', 'G020'),
+(289, 'Demam tinggi', 'G021'),
+(290, 'Radang saluran getah bening', 'G022'),
+(291, 'Demam selama beberapa hari', 'G023'),
+(292, 'Menggigil dan berkeringat', 'G024'),
+(293, 'Nyeri otot', 'G025'),
+(294, 'Pembengkakakan kelenjar getah bening', 'G026'),
+(295, 'Ketiak tampak kemerahan', 'G027'),
+(296, 'Pembesaran tungkai', 'G028'),
+(297, 'Pembesaran buah dada (pada wanita)', 'G029'),
+(298, 'Pembesaran buah zakar (pada pria)', 'G030'),
+(299, 'Mata merah', 'G031'),
+(300, 'Urine warna gelap', 'G032'),
+(301, 'Produksi urine berkurang', 'G033'),
+(302, 'Diare pada anak', 'G034'),
+(303, 'Denyut nadi melambat', 'G035'),
+(304, 'Gangguan berbicara dan berjalan', 'G036'),
+(305, 'Kejang 75% pada anak', 'G037'),
+(306, 'Perubahan status mental', 'G038'),
+(307, 'Gangguan sistem motorik', 'G039'),
+(308, 'Iritabilitas pada anak', 'G040'),
+(309, 'Sakit mata', 'G041'),
+(310, 'Flu', 'G042'),
+(311, 'Lumpuh', 'G043'),
+(312, 'Koma', 'G044'),
+(313, 'demam ringan timbul hilang', 'G045'),
+(314, 'Mengantuk', 'G046'),
+(315, 'Mengigau (delirium)', 'G047'),
+(316, 'Tidak enak badan', 'G048'),
+(317, 'Lelah disertai menggigil dan demam', 'G049'),
+(318, 'Sakit kepala hebat', 'G050'),
+(319, 'Anemia', 'G051'),
+(320, 'Gatal-gatal', 'G052');
 
 -- --------------------------------------------------------
 
@@ -166,16 +167,15 @@ CREATE TABLE IF NOT EXISTS `pemeriksaan` (
   `tanggal` date DEFAULT NULL,
   `user_id` int(11) NOT NULL,
   `penyakit_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pemeriksaan`
 --
 
 INSERT INTO `pemeriksaan` (`id`, `tanggal`, `user_id`, `penyakit_id`) VALUES
-(44, '2019-05-30', 1, 4),
-(45, '2019-06-10', 12, 0),
-(46, '2019-06-10', 12, 0);
+(49, '2019-06-10', 1, 59),
+(50, '2019-06-10', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -187,21 +187,26 @@ CREATE TABLE IF NOT EXISTS `pemeriksaan_detail` (
   `id` int(11) NOT NULL,
   `pemeriksaan_id` int(11) NOT NULL,
   `gejala_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=192 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=219 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pemeriksaan_detail`
 --
 
 INSERT INTO `pemeriksaan_detail` (`id`, `pemeriksaan_id`, `gejala_id`) VALUES
-(184, 44, 149),
-(185, 44, 123),
-(186, 45, 220),
-(187, 45, 221),
-(188, 45, 222),
-(189, 46, 220),
-(190, 46, 221),
-(191, 46, 222);
+(206, 49, 269),
+(207, 49, 270),
+(208, 49, 271),
+(209, 49, 272),
+(210, 49, 273),
+(211, 49, 274),
+(212, 49, 275),
+(213, 49, 276),
+(214, 49, 277),
+(215, 49, 278),
+(216, 50, 271),
+(217, 50, 291),
+(218, 50, 298);
 
 -- --------------------------------------------------------
 
@@ -213,14 +218,23 @@ CREATE TABLE IF NOT EXISTS `pengetahuan` (
   `id` int(11) NOT NULL,
   `id_penyakit` int(11) NOT NULL,
   `id_gejala` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=374 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=404 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pengetahuan`
 --
 
 INSERT INTO `pengetahuan` (`id`, `id_penyakit`, `id_gejala`) VALUES
-(373, 59, 217),
+(394, 59, 269),
+(395, 59, 270),
+(396, 59, 271),
+(397, 59, 272),
+(398, 59, 273),
+(399, 59, 274),
+(400, 59, 275),
+(401, 59, 276),
+(402, 59, 277),
+(403, 59, 278),
 (365, 62, 217),
 (366, 63, 217);
 
@@ -275,9 +289,9 @@ CREATE TABLE IF NOT EXISTS `penyakit` (
 --
 
 INSERT INTO `penyakit` (`id`, `kode`, `penyakit`, `penanganan`, `pencegahan`, `gambar`) VALUES
-(59, 'P1', 'Chikungunya', 'Penangnagn 1 ', 'Pencegahan ', 'sharinggan.jpg'),
+(59, 'P1', 'Chikungunya', 'Penangnagn 1 ', 'Pencegahan ', 'sharinggan1.jpg'),
 (60, 'P2', 'Demam Berdarah Dengue (DBD)', 'faf', 'fdfds', '32fe1ba3-d8bd-4c99-8415-9dc69587fdf83.jpg'),
-(61, 'P3', 'Kaki Gajah', '', '', ''),
+(61, 'P3', 'Kaki Gajah', '', '', 'bencanaalam.jpg'),
 (62, 'P4', 'Demam Kuning', '', '', ''),
 (63, 'P5', 'Radang Otak', '', '', ''),
 (64, 'P6', 'Virus West Nile', '', '', ''),
@@ -287,54 +301,6 @@ INSERT INTO `penyakit` (`id`, `kode`, `penyakit`, `penanganan`, `pencegahan`, `g
 (68, 'P10', 'Malaria Tropica', '', '', ''),
 (71, '2424', 'asdfaddsaf', 'fsdafdsadfd', 'fsafsda', ''),
 (72, '342', 'fafd', 'fad', 'fdafd', 'logo-lantas-baru12.png');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `referensi`
---
-
-CREATE TABLE IF NOT EXISTS `referensi` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
-  `umur` float NOT NULL,
-  `jk` char(2) NOT NULL,
-  `penyakit_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `referensi`
---
-
-INSERT INTO `referensi` (`id`, `nama`, `umur`, `jk`, `penyakit_id`) VALUES
-(4, 'Budi', 34, 'L', 1),
-(5, 'Herman', 30, 'L', 2);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `referensi_detail`
---
-
-CREATE TABLE IF NOT EXISTS `referensi_detail` (
-  `id` int(11) NOT NULL,
-  `gejala_id` int(11) NOT NULL,
-  `referensi_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `referensi_detail`
---
-
-INSERT INTO `referensi_detail` (`id`, `gejala_id`, `referensi_id`) VALUES
-(9, 133, 5),
-(10, 134, 5),
-(11, 122, 5),
-(12, 150, 5),
-(13, 124, 5),
-(18, 122, 4),
-(19, 141, 4),
-(20, 123, 4);
 
 -- --------------------------------------------------------
 
@@ -423,18 +389,6 @@ ALTER TABLE `penyakit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `referensi`
---
-ALTER TABLE `referensi`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `referensi_detail`
---
-ALTER TABLE `referensi_detail`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -442,7 +396,7 @@ ALTER TABLE `referensi_detail`
 -- AUTO_INCREMENT for table `gejala`
 --
 ALTER TABLE `gejala`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=268;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=321;
 --
 -- AUTO_INCREMENT for table `kemiripan`
 --
@@ -457,17 +411,17 @@ ALTER TABLE `konsultasi`
 -- AUTO_INCREMENT for table `pemeriksaan`
 --
 ALTER TABLE `pemeriksaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `pemeriksaan_detail`
 --
 ALTER TABLE `pemeriksaan_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=192;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=219;
 --
 -- AUTO_INCREMENT for table `pengetahuan`
 --
 ALTER TABLE `pengetahuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=374;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=404;
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
@@ -478,16 +432,6 @@ ALTER TABLE `pengguna`
 --
 ALTER TABLE `penyakit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=73;
---
--- AUTO_INCREMENT for table `referensi`
---
-ALTER TABLE `referensi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `referensi_detail`
---
-ALTER TABLE `referensi_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- Constraints for dumped tables
 --
