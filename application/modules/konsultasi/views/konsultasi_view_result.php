@@ -26,8 +26,12 @@
 
 <HR />
 
+<?php 
+if($found == 1 ) { 
+?>
+
 <div class="row">
-	<div class="col-md-9">
+	<div class="col-md-8">
 <strong>Gejala yang dialami : </strong> <br />
 <ol>
 	<?php foreach($rec_gejala->result() as $row): ?>
@@ -47,10 +51,31 @@
 <strong>Penanganan : </strong><br />
 <?php   echo $penyakit->penanganan; ?>
 </div>	
-<div class="col-md-3">
-	<img src="<?php  ?>">
+<div class="col-md-4">
+	<?php 
+$image = (!empty($row->gambar))?$row->gambar:"noimage.png";
+
+
+	?>
+	<img  src="<?php echo base_url("uploads/$image") ?>">
 </div>
 </div>
+<?php } 
+else {   ?> 
+
+
+<div class="row">
+	<div class="col-md-12">
+		<h4> DATA TIDAK DITEMUKAN </h4>
+	</div>
+
+</div>
+
+
+
+<?php } ?>
+
+
 <!-- end of card -->
 </div> 
 

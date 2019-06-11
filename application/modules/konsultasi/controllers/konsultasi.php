@@ -70,6 +70,7 @@ function review($id){
 //         )
 
 // )	
+$post = array();
 
 $this->db->select('g.*, pd.gejala_id')
 ->from("pemeriksaan_detail pd")

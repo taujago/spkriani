@@ -219,7 +219,10 @@
                     </a>
               </li>
 
-               
+<?php 
+
+if($_SESSION['userdata'][0]['level'] == "1") : 
+?>            
               <li class="site-menu-item has-sub">
                 <a href="javascript:void(0)">
                         <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
@@ -261,7 +264,7 @@
                     </a>
               </li>
 
-
+<?php endif; ?>
               <li class="site-menu-item">
                     <a class="animsition-link" href="<?php echo site_url("konsultasi"); ?>">
                        <i class="site-menu-icon fa-life-bouy" aria-hidden="true"></i>KONSULTASI
@@ -269,7 +272,7 @@
               </li>
 
               <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo site_url("home"); ?>">
+                    <a class="animsition-link" href="<?php echo site_url("konsultasi/listview"); ?>">
                        <i class="site-menu-icon wb-library" aria-hidden="true"></i>LIHAT DATA KONSULTASI
                     </a>
               </li>
