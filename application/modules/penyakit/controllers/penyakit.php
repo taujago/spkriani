@@ -54,10 +54,10 @@ class penyakit extends master_controller {
 		if(isset($_FILES['gambar'])) { 
 
 			$config['upload_path']          = './uploads/';
-	        $config['allowed_types']        = 'gif|jpg|png';
-	        $config['max_size']             = 1000;
-	        $config['max_width']            = 1024;
-	        $config['max_height']           = 768;
+	        $config['allowed_types']        = 'gif|jpg|png|jpeg';
+	        $config['max_size']             = 10000;
+	        $config['max_width']            = 10240;
+	        $config['max_height']           = 7680;
 
 	        $this->load->library('upload', $config);
 

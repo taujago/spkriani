@@ -22,7 +22,7 @@ span.select2-container {
 
 
 <div class="table-responsive">
-	<table id="tabel" class="table card-table table-vcenter text-nowrap">
+	<table id="tabel" class="table card-table table-vcenter">
 		<thead >
 			<tr>
 				<th width="5%">NO </th>
