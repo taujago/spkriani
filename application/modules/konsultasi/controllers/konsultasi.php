@@ -250,6 +250,8 @@ if($res->num_rows() > 0 ) {
 	$this->db->where("id",$id);
 	$this->db->update("pemeriksaan",array("penyakit_id"=>$dt_penyakit->id));
 
+	$this->db->where("id",$id);
+	$data_array['pemeriksaan'] =  $this->db->get("pemeriksaan")->row();
 
 	$this->db->select('g.*')->from('gejala g')
 	->join('pemeriksaan_detail pd','pd.gejala_id=g.id')
@@ -287,9 +289,10 @@ $this->method="listview";
 
 $data_array = array();
 
-$this->db->select('p.*,u.nama,u.umur,u.jk,u.alamat')
+$this->db->select('p.*,u.nama,u.umur,u.jk,u.alamat, skt.penyakit')
 ->from('pemeriksaan p')
 ->join('pengguna u','p.user_id = u.id');
+$this->db->join('penyakit skt','skt.id = p.penyakit_id');
 $this->db->order_by("tanggal","desc");
 
 if($_SESSION['userdata'][0]['level'] == 0 ) {

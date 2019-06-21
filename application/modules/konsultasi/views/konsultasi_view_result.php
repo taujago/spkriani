@@ -5,7 +5,7 @@
 <div class="card-body">
 
 <div class="row">
-	<div class="col-md-3"><strong> Nama Pasien </strong></div>
+<!-- 	<div class="col-md-3"><strong> Nama Pasien </strong></div>
 	<div class="col-md-3">: <?php echo $userdata['nama']; ?> </div>
 
 	<div class="col-md-3"><strong> Umur Pasien </strong></div>
@@ -22,6 +22,22 @@
 	<div class="col-md-3"><strong> Tanggal Pemeriksaan </strong></div>
 	<div class="col-md-3">: <?php //echo flipdate($userdata['tanggal']); ?> </div>
 
+ -->
+
+ <div class="col-md-12">
+<table class="table table-striped">
+	<tr><td width="20%">Kode Pasien  </td><td> : <?php echo "P".$userdata['id']; ?></td></tr>
+	<tr><td>Nama Pasien  </td><td> : <?php echo $userdata['nama']; ?></td></tr>
+	<tr><td>Jenis Kelamin </td><td> : <?php echo $userdata['jk']; ?></td></tr>
+	<tr><td>Usia  </td><td> : <?php echo $userdata['umur']; ?></td></tr>
+	<tr><td>Tanggal pemeriksaan </td><td> : <?php echo flipdate($pemeriksaan->tanggal); ?></td></tr>
+</table>
+
+<p class="text-dark">
+	Telah diperoleh hasil sebagai berikut : 
+</p>
+
+</div>
 </div>
 
 <HR />
@@ -32,24 +48,34 @@ if($found == 1 ) {
 
 <div class="row">
 	<div class="col-md-8">
-<strong>Gejala yang dialami : </strong> <br />
-<ol>
+
+<table class="table table-striped">
+	<tr><td width="20%">Gejala </td><td> 
+
+		<ol>
 	<?php foreach($rec_gejala->result() as $row): ?>
 		<li><?php echo $row->gejala; ?></li>
 	<?php endforeach; ?>
 </ol>
+</td></tr>
+<tr>
+	<td>Nama penyakit </td><td> : <?php echo $penyakit->penyakit ;   ?></td>
+</tr>
+<tr>
+	<td>Penyebab  </td><td> : <?php //echo $penyakit->penyakit ;   ?></td>
+</tr>
+
+<tr>
+	<td>Pencegahan  </td><td> : <?php echo $penyakit->pencegahan ;   ?></td>
+</tr>
+
+<tr>
+	<td>Penanganan  </td><td> : <?php echo $penyakit->penanganan ;   ?></td>
+</tr>
+
+</table>
  
-<br />
-<strong>Hasil Diagnosa </strong>
-<br />
-<strong>Nama Penyakit : </strong> <br />
-<?php   echo $penyakit->penyakit ; ?>
-<br /><br />
-<strong>Pencegahan : </strong><br />
-<?php   echo $penyakit->pencegahan; ?>
-<br />
-<strong>Penanganan : </strong><br />
-<?php   echo $penyakit->penanganan; ?>
+ 
 </div>	
 <div class="col-md-4">
 	<?php 
