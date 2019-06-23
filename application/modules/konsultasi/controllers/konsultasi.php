@@ -256,7 +256,7 @@ if($res->num_rows() > 0 ) {
 	$this->db->select('g.*')->from('gejala g')
 	->join('pemeriksaan_detail pd','pd.gejala_id=g.id')
 	->join('pemeriksaan p','p.id = pd.pemeriksaan_id ')
-	->where("p.penyakit_id",$dt_penyakit->id);
+	->where("p.id",$id);
 	$data_array['rec_gejala'] = $this->db->get();
 
 	$this->db->where("id",$dt_penyakit->id);
@@ -295,13 +295,16 @@ $this->db->select('p.*,u.nama,u.umur,u.jk,u.alamat, skt.penyakit')
 $this->db->join('penyakit skt','skt.id = p.penyakit_id');
 $this->db->order_by("tanggal","desc");
 
+
 if($_SESSION['userdata'][0]['level'] == 0 ) {
 	$this->db->where("p.user_id",$_SESSION['userdata'][0]['id']);
 }
 
+
 $data_array['rec_pemeriksaan'] = $this->db->get();
 
 
+// echo $this->db->last_query(); exit;
 
 $content = $this->load->view($this->controller."_list_view",$data_array,true);
 
@@ -341,6 +344,29 @@ $this->render();
 
 }
 
+function get_laporan(){
+	$post = $this->input->post();
+
+	extract($post);
+
+	$sql = "  
+SELECT p.*, 
+       count(pm.id) as jumlah , 
+      sum( if(u.jk='L',1,0)) as L,
+      sum( if(u.jk='P',1,0)) as P     
+  
+    FROM penyakit p 
+ join pemeriksaan pm on p.id = pm.penyakit_id
+ join pengguna u on u.id = pm.user_id 
+  group by p.id 
+  
+";
+
+$data_array['record'] = $this->db->query($sql);
+
+ $this->load->view($this->controller."_laporan_table",$data_array);
+
+}
 
 
 }

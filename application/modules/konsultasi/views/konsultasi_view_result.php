@@ -3,7 +3,9 @@
 	<h3 class="card-title">DATA DIAGNOSA </h3>
 </div>
 <div class="card-body">
-
+<?php 
+if($found == 1 ) { 
+?>
 <div class="row">
 <!-- 	<div class="col-md-3"><strong> Nama Pasien </strong></div>
 	<div class="col-md-3">: <?php echo $userdata['nama']; ?> </div>
@@ -42,9 +44,7 @@
 
 <HR />
 
-<?php 
-if($found == 1 ) { 
-?>
+
 
 <div class="row">
 	<div class="col-md-8">
