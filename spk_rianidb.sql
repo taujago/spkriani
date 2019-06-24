@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2019 at 01:23 PM
+-- Generation Time: Jun 24, 2019 at 05:23 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.36
 
@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `pemeriksaan` (
   `tanggal` date DEFAULT NULL,
   `user_id` int(11) NOT NULL,
   `penyakit_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pemeriksaan`
@@ -175,7 +175,13 @@ CREATE TABLE IF NOT EXISTS `pemeriksaan` (
 
 INSERT INTO `pemeriksaan` (`id`, `tanggal`, `user_id`, `penyakit_id`) VALUES
 (49, '2019-06-10', 1, 59),
-(50, '2019-06-10', 1, NULL);
+(50, '2019-06-10', 1, NULL),
+(51, '2019-06-23', 8, NULL),
+(52, '2019-06-23', 8, NULL),
+(53, '2019-06-23', 8, 59),
+(54, '2019-06-24', 9, 59),
+(55, '2019-06-24', 9, 59),
+(56, '2019-06-24', 11, 59);
 
 -- --------------------------------------------------------
 
@@ -187,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `pemeriksaan_detail` (
   `id` int(11) NOT NULL,
   `pemeriksaan_id` int(11) NOT NULL,
   `gejala_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=219 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pemeriksaan_detail`
@@ -206,7 +212,62 @@ INSERT INTO `pemeriksaan_detail` (`id`, `pemeriksaan_id`, `gejala_id`) VALUES
 (215, 49, 278),
 (216, 50, 271),
 (217, 50, 291),
-(218, 50, 298);
+(218, 50, 298),
+(219, 51, 269),
+(220, 51, 270),
+(221, 51, 271),
+(222, 51, 272),
+(223, 51, 273),
+(224, 51, 274),
+(225, 52, 269),
+(226, 52, 270),
+(227, 52, 271),
+(228, 52, 272),
+(229, 52, 273),
+(230, 52, 274),
+(231, 52, 275),
+(232, 52, 276),
+(233, 52, 277),
+(234, 53, 269),
+(235, 53, 270),
+(236, 53, 271),
+(237, 53, 272),
+(238, 53, 273),
+(239, 53, 274),
+(240, 53, 275),
+(241, 53, 276),
+(242, 53, 277),
+(243, 53, 278),
+(244, 54, 269),
+(245, 54, 270),
+(246, 54, 271),
+(247, 54, 272),
+(248, 54, 273),
+(249, 54, 274),
+(250, 54, 275),
+(251, 54, 276),
+(252, 54, 277),
+(253, 54, 278),
+(254, 55, 269),
+(255, 55, 270),
+(256, 55, 271),
+(257, 55, 272),
+(258, 55, 273),
+(259, 55, 274),
+(260, 55, 275),
+(261, 55, 276),
+(262, 55, 277),
+(263, 55, 278),
+(264, 56, 269),
+(265, 56, 270),
+(266, 56, 271),
+(267, 56, 272),
+(268, 56, 273),
+(269, 56, 274),
+(270, 56, 275),
+(271, 56, 276),
+(272, 56, 277),
+(273, 56, 278);
 
 -- --------------------------------------------------------
 
@@ -218,25 +279,23 @@ CREATE TABLE IF NOT EXISTS `pengetahuan` (
   `id` int(11) NOT NULL,
   `id_penyakit` int(11) NOT NULL,
   `id_gejala` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=404 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=434 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pengetahuan`
 --
 
 INSERT INTO `pengetahuan` (`id`, `id_penyakit`, `id_gejala`) VALUES
-(394, 59, 269),
-(395, 59, 270),
-(396, 59, 271),
-(397, 59, 272),
-(398, 59, 273),
-(399, 59, 274),
-(400, 59, 275),
-(401, 59, 276),
-(402, 59, 277),
-(403, 59, 278),
-(365, 62, 217),
-(366, 63, 217);
+(424, 59, 269),
+(425, 59, 270),
+(426, 59, 271),
+(427, 59, 272),
+(428, 59, 273),
+(429, 59, 274),
+(430, 59, 275),
+(431, 59, 276),
+(432, 59, 277),
+(433, 59, 278);
 
 -- --------------------------------------------------------
 
@@ -263,7 +322,7 @@ CREATE TABLE IF NOT EXISTS `pengguna` (
 INSERT INTO `pengguna` (`id`, `username`, `password`, `level`, `nama`, `hp`, `alamat`, `jk`, `umur`) VALUES
 (1, 'admin', '0cc175b9c0f1b6a831c399e269772661', 1, 'Aministrator', '08132945559', 'Jl. kenair no. 343', 'L', 0),
 (7, 'budi', '0cc175b9c0f1b6a831c399e269772661', 0, 'Firmansyah', '0813280800', 'jl. kenari no. 34', 'L', 20),
-(8, 'bejo', '7fc56270e7a70fa81a5935b72eacbe29', 0, 'Bejo sandix', '0813243595', 'Jl. keramat jadixxx', 'P', 40),
+(8, 'bejo', '0cc175b9c0f1b6a831c399e269772661', 0, 'Bejo sandix', '0813243595', 'Jl. keramat jadixxx', 'P', 40),
 (9, 'heri', '0cc175b9c0f1b6a831c399e269772661', 0, 'Heru hendriyadi', '45838538r3985', 'Jl. undru no. 4', 'P', 40),
 (10, 'heru', '0cc175b9c0f1b6a831c399e269772661', 0, 'Heru hendriyadi', '083848583', 'Jl. kenari no. 345', 'L', 3),
 (11, 'eko', '0cc175b9c0f1b6a831c399e269772661', 0, 'Eko kurniawan', '03895935893', 'Jl. kenari no. 335', 'L', 25),
@@ -289,11 +348,11 @@ CREATE TABLE IF NOT EXISTS `penyakit` (
 --
 
 INSERT INTO `penyakit` (`id`, `kode`, `penyakit`, `penanganan`, `pencegahan`, `gambar`) VALUES
-(59, 'P1', 'Chikungunya', 'Penangnagn 1 ', 'Pencegahan ', 'sharinggan1.jpg'),
+(59, 'P1', 'Chikungunya', 'Penangnagn 1 ', '1. Penyebab ini <br /> \n2. Penyebaba itu <br />\n3. Penyebab lainnya <br />', 'sharinggan1.jpg'),
 (60, 'P2', 'Demam Berdarah Dengue (DBD)', 'faf', 'fdfds', '32fe1ba3-d8bd-4c99-8415-9dc69587fdf83.jpg'),
-(61, 'P3', 'Kaki Gajah', '', '', 'bencanaalam.jpg'),
-(62, 'P4', 'Demam Kuning', '', '', ''),
-(63, 'P5', 'Radang Otak', '', '', ''),
+(61, 'P3', 'Kaki Gajah', 'jfafk ffj asl', 'jkdjfalkfjdaads ', 'bencanaalam.jpg'),
+(62, 'P4', 'Demam Kuning', 'fasfs ad', 'fasfsda fa fdsa d', ''),
+(63, 'P5', 'Radang Otak', 'radfa', 'adsfsadad fadf', ''),
 (64, 'P6', 'Virus West Nile', '', '', ''),
 (65, 'P7', 'Virus Zika', '', '', ''),
 (66, 'P8', 'Malaria Tertiana', '', '', ''),
@@ -411,17 +470,17 @@ ALTER TABLE `konsultasi`
 -- AUTO_INCREMENT for table `pemeriksaan`
 --
 ALTER TABLE `pemeriksaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT for table `pemeriksaan_detail`
 --
 ALTER TABLE `pemeriksaan_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=219;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=274;
 --
 -- AUTO_INCREMENT for table `pengetahuan`
 --
 ALTER TABLE `pengetahuan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=404;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=434;
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
