@@ -27,16 +27,17 @@
 		<tr>
 			<td><?php echo $n; ?></td>
 			<td><?php echo $row->penyakit; ?></td>
-			<td><?php echo $row->L; ?></td>
+			
 			<td><?php echo $row->P; ?></td>
+			<td><?php echo $row->L; ?></td>
 			<td><?php echo $row->jumlah; ?></td>
 		</tr>
 	<?php endforeach; ?>
 	<tr>
 		<th colspan="2"><strong>Total </strong></td>
-		
-		<th><?php echo $tl; ?></td>
 		<th><?php echo $tp; ?></td>
+		<th><?php echo $tl; ?></td>
+		
 		<th><?php echo ($tl+$tp); ?></td>
 
 	</tr>

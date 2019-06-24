@@ -35,7 +35,11 @@ function arr_dropdown($vTable, $vINDEX, $vVALUE, $vORDERBY){
  }
 
 function arr_dropdown_penyakit(){
-    $this->db->order_by("kode");
+
+    $this->db->_protect_identifiers = FALSE;
+    $this->db->order_by("cast(substring(kode,3,3) as signed)");
+
+
     $res = $this->db->get("penyakit");
     $arr = array();
     foreach($res->result() as $row) : 
