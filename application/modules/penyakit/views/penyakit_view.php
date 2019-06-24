@@ -53,7 +53,7 @@ $image = (!empty($row->gambar))?$row->gambar:"noimage.png";
 				<td><?php echo $row->pencegahan; ?></td>
 				<td><img width="70px" height="70px" src="<?php echo base_url("uploads/$image") ?>"></td>
 				<td>
-					<a href="#!"  onclick="edit('<?php echo $row->id; ?>','<?php echo $row->kode; ?>','<?php echo $row->penyakit; ?>','<?php echo $row->penanganan; ?>','<?php echo $row->pencegahan; ?>');"  class="btn btn-warning text-light"><i class="fa fa-pencil"></i>Edit</a>
+					<a href="#!"  onclick="edit('<?php echo $row->id; ?>');"  class="btn btn-warning text-light"><i class="fa fa-pencil"></i>Edit</a>
 					<a href="#!" onclick="hapus('<?php echo $row->id; ?>');"  class="btn btn-danger text-light"><i class="fa fa-trash"></i>Hapus	</a>
 </td>
 			</tr>

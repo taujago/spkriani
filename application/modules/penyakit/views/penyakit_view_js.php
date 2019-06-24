@@ -135,19 +135,29 @@ $("#frmkriteria").submit(function(){
 
 
 
-function edit(id,kode,penyakit,penanganan,pencegahan){
+function edit(id){
 	$("#judul").html('EDIT DATA PENYAKIT ');
 	
 	v_url = '<?php echo site_url("$this->controller/update") ?>';
 
 
 
-	$("#id").val(id);
-	$("#kode").val(kode);
-	$("#penyakit").val(penyakit);
-	$("#penanganan").val(penanganan);
-	$("#pencegahan").val(pencegahan);
-	$("#formModal").modal('show');
+	$.ajax({
+		url : '<?php echo site_url("$this->controller/get_detail") ?>/'+id,
+		dataType : 'json',
+		success : function(obj){
+
+			$("#id").val(obj.id);
+			$("#kode").val(obj.kode);
+			$("#penyakit").val(obj.penyakit);
+			$("#penanganan").val(obj.penanganan);
+			$("#pencegahan").val(obj.pencegahan);
+			$("#formModal").modal('show');
+
+		}
+	});
+
+	
 
 
 

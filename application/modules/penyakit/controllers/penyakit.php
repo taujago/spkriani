@@ -387,6 +387,13 @@ $this->render();
 }
 
 
+function get_detail($id){
+	$this->db->where("id",$id);
+	$res = $this->db->get("penyakit");
+	$data = $res->row_array();
+	echo json_encode($data);
+}
+
 }
 
 ?>
