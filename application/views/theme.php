@@ -8,7 +8,7 @@
     <meta name="description" content="bootstrap admin template">
     <meta name="author" content="">
     
-    <title>SISTEM PENDUKUNG KEPUTUSAN </title>
+    <title>SISTEM PAKAR DIAGNOSA AWAL PENYAKIT AKIBAT GIGITAN NYAMUK </title>
     
     <link rel="apple-touch-icon" href="<?php echo base_url("assets"); ?>/assets/images/apple-touch-icon.png">
     <link rel="shortcut icon" href="<?php echo base_url("assets"); ?>/assets/images/favicon.ico">
@@ -141,7 +141,7 @@
         </button>
         <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
           <img class="navbar-brand-logo" src="<?php echo base_url("assets"); ?>/assets/images/logo.png" title="Remark">
-          <span class="navbar-brand-text hidden-xs-down"> USJ - JAYAPURA</span>
+          <span class="navbar-brand-text hidden-xs-down"> USTJ - JAYAPURA</span>
         </div>
         <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
           data-toggle="collapse">
@@ -215,7 +215,7 @@
 
               <li class="site-menu-item">
                     <a class="animsition-link" href="<?php echo site_url("home"); ?>">
-                       <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>DASHBOARD
+                       <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>BERANDA
                     </a>
               </li>
 
@@ -274,7 +274,7 @@ if($_SESSION['userdata'][0]['level'] == "1") :
               </li>
               <li class="site-menu-item">
                     <a class="animsition-link" href="<?php echo site_url("konsultasi"); ?>">
-                       <i class="site-menu-icon fa-life-bouy" aria-hidden="true"></i>KONSULTASI
+                       <i class="site-menu-icon fa-life-bouy" aria-hidden="true"></i>KONSULTASI/FAKTA
                     </a>
               </li>
 
@@ -318,7 +318,7 @@ if($_SESSION['userdata'][0]['level'] == "1") :
     <footer class="site-footer">
       <div class="site-footer-legal">© 2019 USTJ - Jayapura </div>
       <div class="site-footer-right">
-        Created  with <i class="red-600 wb wb-heart"></i> by  Riani
+        Created  with <i class="red-600 wb wb-heart"></i> by  Riani Ta'Diampang-15 411 088
       </div>
     </footer>
    
