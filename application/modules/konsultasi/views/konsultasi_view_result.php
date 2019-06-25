@@ -79,11 +79,11 @@ if($found == 1 ) {
 </div>	
 <div class="col-md-4">
 	<?php 
-$image = (!empty($row->gambar))?$row->gambar:"noimage.png";
+$image = (!empty($penyakit->gambar))?$penyakit->gambar:"noimage.png";
 
 
 	?>
-	<img  src="<?php echo base_url("uploads/$image") ?>">
+	<img width="50%" height="50%" src="<?php echo base_url("uploads/$image") ?>">
 </div>
 </div>
 <?php } 
