@@ -115,7 +115,10 @@ in_array("G018",$post['gejala_id']) &&
 in_array("G019",$post['gejala_id']) &&
 in_array("G020",$post['gejala_id'])  
 ) $kd="P2";
- 
+
+
+// G004^G005^G007^G022^G023^G024^G025^G026^G027^G028^G029^G030
+
 else if ( // rule 3
 in_array("G004",$post['gejala_id']) && 
 in_array("G005",$post['gejala_id']) && 
@@ -131,6 +134,7 @@ in_array("G029",$post['gejala_id']) &&
 in_array("G030",$post['gejala_id']) 
 ) $kd="P3";
 
+// G001^G004^G005^G007^G016^G025^G031^G032^G033^G034^G035
 else if( // rule 4 
 in_array("G001",$post['gejala_id']) && 
 in_array("G004",$post['gejala_id']) && 
@@ -144,6 +148,8 @@ in_array("G033",$post['gejala_id']) &&
 in_array("G034",$post['gejala_id']) && 
 in_array("G035",$post['gejala_id'])   
 ) $kd="P4";
+
+// G001^G005^G007^G034^G036^G037^G038^G039^G040
 
 else if( // rule 5
 
@@ -159,78 +165,96 @@ in_array("G040",$post['gejala_id'])
 
 ) $kd="P5";
 
+
+//  G004^G005^G007^G009^G010^G012^G017^G018^G025^G034^G041^G042^G043^G044 
+
+
 else if( // rule 6
  
-in_array("G041",$post['gejala_id']) &&
-in_array("G042",$post['gejala_id']) &&
-in_array("G034",$post['gejala_id']) &&
-in_array("G021",$post['gejala_id']) &&
-in_array("G012",$post['gejala_id']) &&
-in_array("G010",$post['gejala_id']) &&
-in_array("G025",$post['gejala_id']) &&
-in_array("G009",$post['gejala_id']) &&
-in_array("G049",$post['gejala_id']) &&
 in_array("G004",$post['gejala_id']) &&
 in_array("G005",$post['gejala_id']) &&
 in_array("G007",$post['gejala_id']) &&
-in_array("G036",$post['gejala_id']) &&
+in_array("G009",$post['gejala_id']) &&
+in_array("G010",$post['gejala_id']) &&
+in_array("G012",$post['gejala_id']) &&
 in_array("G017",$post['gejala_id']) &&
+in_array("G018",$post['gejala_id']) &&
+in_array("G025",$post['gejala_id']) &&
+in_array("G034",$post['gejala_id']) &&
+in_array("G041",$post['gejala_id']) &&
+in_array("G042",$post['gejala_id']) &&
 in_array("G043",$post['gejala_id']) &&
 in_array("G044",$post['gejala_id']) 
 ) $kd="P6";
+
+
+
+
+// G006^G007^G010^G023^G025^G031^G052
+
+
+
+
 else if ( // rule 7 
 
-in_array("G002",$post['gejala_id']) && 
 in_array("G006",$post['gejala_id']) && 
 in_array("G007",$post['gejala_id']) && 
 in_array("G010",$post['gejala_id']) && 
-in_array("G011",$post['gejala_id']) && 
-in_array("G016",$post['gejala_id']) && 
 in_array("G023",$post['gejala_id']) && 
 in_array("G025",$post['gejala_id']) && 
 in_array("G031",$post['gejala_id']) && 
-in_array("G039",$post['gejala_id']) && 
-in_array("G040",$post['gejala_id']) && 
-in_array("G041",$post['gejala_id']) && 
-in_array("G042",$post['gejala_id']) && 
-in_array("G043",$post['gejala_id']) && 
-in_array("G045",$post['gejala_id']) && 
-in_array("G052",$post['gejala_id'])  
+in_array("G052",$post['gejala_id']) 
+
+  
 
 )$kd="P7";
 
+// G002^G007^G010^G012^G025^G045
+
 else if( // rule 8 
 
-in_array("G045",$post['gejala_id']) &&
-in_array("G007",$post['gejala_id']) &&
-in_array("G025",$post['gejala_id']) &&
 in_array("G002",$post['gejala_id']) &&
-in_array("G048",$post['gejala_id']) &&
+in_array("G007",$post['gejala_id']) &&
+in_array("G010",$post['gejala_id']) &&
 in_array("G012",$post['gejala_id']) &&
-in_array("G010",$post['gejala_id'])  
+in_array("G025",$post['gejala_id']) &&
+in_array("G045",$post['gejala_id']) 
 ) $kd="P8";
 
+
+// G002^G025^G045^G046^G047^G048^G049^G050
+
 else if( // rule 9 
-in_array("G045",$post['gejala_id']) &&
-in_array("G025",$post['gejala_id']) &&
 in_array("G002",$post['gejala_id']) &&
-in_array("G048",$post['gejala_id']) &&
+in_array("G025",$post['gejala_id']) &&
+in_array("G045",$post['gejala_id']) &&
 in_array("G046",$post['gejala_id']) &&
-in_array("G012",$post['gejala_id']) &&
+in_array("G047",$post['gejala_id']) &&
+in_array("G048",$post['gejala_id']) &&
 in_array("G049",$post['gejala_id']) &&
 in_array("G050",$post['gejala_id'])  
 ) $kd="P9";
+
+// G005^G010^G012^G038^G047^G049^G050^G051
+
+
+
+
+
+
+
+
+
 else if(
 
-in_array("G047",$post['gejala_id']) &&
-in_array("G038",$post['gejala_id']) &&
-in_array("G021",$post['gejala_id']) &&
+in_array("G005",$post['gejala_id']) &&
+in_array("G010",$post['gejala_id']) &&
 in_array("G012",$post['gejala_id']) &&
+in_array("G038",$post['gejala_id']) &&
+in_array("G047",$post['gejala_id']) &&
 in_array("G049",$post['gejala_id']) &&
 in_array("G050",$post['gejala_id']) &&
-in_array("G010",$post['gejala_id']) &&
-in_array("G005",$post['gejala_id']) &&
-in_array("G051",$post['gejala_id'])  
+in_array("G051",$post['gejala_id']) 
 ) $kd="P10";
 else 
 {
