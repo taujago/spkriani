@@ -140,7 +140,7 @@
           <i class="icon wb-more-horizontal" aria-hidden="true"></i>
         </button>
         <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
-          <img class="navbar-brand-logo" src="<?php echo base_url("assets"); ?>/assets/images/logo.png" title="Remark">
+          <img class="navbar-brand-logo" src="<?php echo base_url("assets"); ?>/images/ustj.png" title="Remark">
           <span class="navbar-brand-text hidden-xs-down"> USTJ - JAYAPURA</span>
         </div>
         <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
@@ -175,7 +175,7 @@
               <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
                 data-animation="scale-up" role="button">
                 <span class="avatar avatar-online">
-                  <img src="<?php echo base_url("assets"); ?>/global/portraits/5.jpg" alt="...">
+                  <img src="<?php echo base_url("assets"); ?>/images/user.png" alt="...">
                   <i></i>
                 </span>
               </a>
