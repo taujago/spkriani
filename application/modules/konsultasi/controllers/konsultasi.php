@@ -238,13 +238,6 @@ in_array("G050",$post['gejala_id'])
 // G005^G010^G012^G038^G047^G049^G050^G051
 
 
-
-
-
-
-
-
-
 else if(
 
 in_array("G005",$post['gejala_id']) &&
