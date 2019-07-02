@@ -249,6 +249,25 @@ in_array("G049",$post['gejala_id']) &&
 in_array("G050",$post['gejala_id']) &&
 in_array("G051",$post['gejala_id']) 
 ) $kd="P10";
+
+else if(
+in_array("G001",$post['gejala_id']) &&
+in_array("G002",$post['gejala_id']) &&
+in_array("G005",$post['gejala_id'])  
+) $kd="P11";
+
+
+
+
+
+else if(
+in_array("G005",$post['gejala_id']) &&
+in_array("G007",$post['gejala_id']) &&
+in_array("G009",$post['gejala_id'])  
+) $kd="P12";
+
+
+
 else 
 {
 	$kd="PPP";
